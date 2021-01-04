@@ -1,7 +1,9 @@
+@charset "UTF-8";
 body {
   padding: 0;
   margin: 0;
   background-color: rgba(183, 176, 176, 0.208);
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🥰</text></svg>"), auto !important;
 }
 
 .container {
@@ -50,6 +52,16 @@ body {
   transition: 0.3s all ease 0.1s;
 }
 
+.container .c-video .controls .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
 .container .c-video .controls .buttons button {
   background: none;
   border: 0;
@@ -75,6 +87,66 @@ body {
   font-size: 28px;
   color: #fff;
   -webkit-font-smoothing: antialiased;
+}
+
+.container .c-video .controls .buttons button + div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .c-video .controls .buttons button + div i {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container .c-video .controls .buttons button + div p {
+  width: 200px;
+  color: #fff;
+  padding: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.container .c-video .controls .buttons button + div div.volume {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container .c-video .controls .buttons button + div div.volume label {
+  color: #fff;
+  font-size: 18px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.container .c-video .controls .buttons button + div div.volume input[type="range"] {
+  width: 100%;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.container .c-video .controls .buttons button + div div.volume input[type="range"]::-webkit-slider-thumb {
+  color: rgba(62, 234, 174, 0.836);
 }
 
 .container .c-video .controls .duration {
